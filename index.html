@@ -376,6 +376,12 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
   const layanan = document.getElementById('layanan').value;
   const pesan = document.getElementById('pesan').value;
   
+  // Validasi jika layanan belum dipilih
+  if (!layanan) {
+    alert('Silakan pilih jenis layanan terlebih dahulu');
+    return;
+  }
+  
   const message = `*PESANAN BARU - GPM Printing*
 
 *Nama:* ${nama}
